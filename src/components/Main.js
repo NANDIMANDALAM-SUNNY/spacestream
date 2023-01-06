@@ -24,7 +24,7 @@ const Main = () => {
 
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-      if(  categoryId){
+      if( data &&  categoryId){
         filteredItems(categoryId)
         setLoading(false)
       }
