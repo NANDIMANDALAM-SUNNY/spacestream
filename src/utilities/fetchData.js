@@ -1,5 +1,5 @@
 import {} from '../firebaseConfig'
-import {collection,doc,getDoc,getDocs, orderBy, query} from 'firebase/firestore';
+import {collection,deleteDoc,doc,getDoc,getDocs, orderBy, query, where} from 'firebase/firestore';
 
 // fetching data from database
  export const getAllFeeds = async (firestoreDb) =>{
@@ -27,10 +27,29 @@ import {collection,doc,getDoc,getDocs, orderBy, query} from 'firebase/firestore'
 
 
  export const videoInfo = async (firestoreDb,id) =>{
-    const videoRef = doc(firestoreDb,'videos',id)
+    const videoRef =  doc(firestoreDb,'videos',id)
     const videSnap = await getDoc(videoRef)
     if(videSnap.exists()){
         return videSnap.data()
     }
-    return 'No such Video'
+    else{
+        return 'No such Video'
+    }
  }
+
+
+ export const deleteVideo = async (firestoreDb,id) =>{
+    await deleteDoc(doc(firestoreDb,'videos',id))
+ }
+
+ export const userUploadedVideos = async (firestoreDb,userId) =>{
+    try {
+       const feeds =  await getDocs(
+            query(collection(firestoreDb, 'videos'),where('userId','==','',userId),('id','desc'))
+        )
+
+        return feeds.docs.map(doc=>doc.data());
+    } catch (error) {
+        console.log(error)
+    }
+ } 

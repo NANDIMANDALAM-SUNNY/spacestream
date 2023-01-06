@@ -29,10 +29,12 @@ useEffect(() => {
       alignItems={'center'}
       cursor={'pointer'}
       rounded='md'
+      width={'full'}
       overflow={'hidden'}
-      maxWidth={'300px'}
-      // position={'realtive'}
-      height={'180px'}
+      maxWidth={'250px'}
+      position='relative'
+      // height={'180px'}
+      // bg=
     >
       <Link  to={`/videoDetail/${data?.id}`}>
         <video 
@@ -43,9 +45,9 @@ useEffect(() => {
         />
       </Link>
       <Flex
-        position={'absolute'}
-        bottom='100'
-        left='100'
+        position='absolute'
+        bottom='0'
+        left='0'
         p={2}
         bg={bg}
         width={'full'}
@@ -65,6 +67,8 @@ useEffect(() => {
               border='2px'
               borderColor={bg}
               mt={-10}
+              minHeight={'50px'}
+              minWidth={'50px'}
           />
           </Link>
     

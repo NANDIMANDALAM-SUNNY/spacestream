@@ -33,7 +33,7 @@ const Spinner = ({msg,progress}) => {
                 fontSize={25}
                 textAlign='center'
                 px={2}
-            >Uploading your vide
+            >{msg}
             </Text>
             {
                 progress && (

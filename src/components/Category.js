@@ -3,8 +3,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Category = ({data}) => {
-  // const { colorMode } = useColorMode()
-  // const bg = useColorModeValue('gray.600','gray.300')
+  const { colorMode } = useColorMode()
+  const bg = useColorModeValue('gray.600','gray.300')
 
   return (
     <>
