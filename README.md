@@ -6,7 +6,7 @@ Spacestream is social media website based on firebase storage where users can po
 
 ## Installation
 
-https://github.com/NANDIMANDALAM-SUNNY/spacestream
+git clone https://github.com/NANDIMANDALAM-SUNNY/spacestream
 
 
 ```bash
