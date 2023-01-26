@@ -2,11 +2,11 @@
 # Spacestream
 
 Spacestream is social media website based on firebase storage where users can post videos and stream videos posted by others,it is fully responsive built on top of chakra-ui
-##Deployed Url : https://codemate-sunny.netlify.app/
+##Deployed Url : https://spacestream.netlify.app/
 
 ## Installation
 
-clone https://github.com/NANDIMANDALAM-SUNNY/codemate
+https://github.com/NANDIMANDALAM-SUNNY/spacestreame
 
 
 ```bash
